@@ -15,6 +15,10 @@ It's also prepared to host many applications to modularize the entire project.
 
 Have fun :)
 
+## Effort Registry
+
+The entire project took 20 minutes to be completed.
+
 ## Technology Stack
 
 -   Python 3.10.3
