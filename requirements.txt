@@ -1,0 +1,11 @@
+# WEB / API
+Django
+djangorestframework
+
+# Tests and low level design
+pre-commit
+coverage
+factory-boy
+
+# Environment
+python-dotenv
