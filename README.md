@@ -1,10 +1,23 @@
-# <<Project Name>>
+# GuestReady Entry Test
 
-<<Project description.>>
+Below you will find instructions on techs used, how to run locally (with venv), how to run with docker and how to run 
+tests. I've also provided example templates, though they only contain dummy data. Django Admin has also been enabled
+but left empty, again, as an example.
+
+You will also find a complete project structure, thought to include internationalization, different managers for the 
+models ORM, serializers (using Django REST Framework), diagrams documentation (using PUML), static content (for
+when the project includes a frontend), templatetags (functions callable from the frontend templates), test coverage,
+flake8, pre-commit hooks and docker.
+
+All requirements are set in the requirements.txt file.
+
+It's also prepared to host many applications to modularize the entire project.
+
+Have fun :)
 
 ## Technology Stack
 
--   Python 3.9.1
+-   Python 3.10.3
 -   Django 4
 
 ## Installation and running
