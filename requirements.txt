@@ -1,6 +1,7 @@
 # WEB / API
 Django
 djangorestframework
+drf-yasg
 
 # Tests and low level design
 pre-commit

@@ -3,8 +3,8 @@ from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
 
-APP_NAME = '<<app name>>'
-APP_DESCRIPTION = _('<<app description>>')
+APP_NAME = 'GuestReady Entry Test'
+APP_DESCRIPTION = _('Example of Project Description')
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', },
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator', },
@@ -23,7 +23,10 @@ DJANGO_APPS = [
 LOCAL_APPS = [
     'applications.apps.CoreConfig'
 ]
-EXTERNAL_APPS = []
+EXTERNAL_APPS = [
+    'rest_framework',
+    'drf_yasg'
+]
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + EXTERNAL_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -43,7 +46,7 @@ REST_FRAMEWORK = {
 }
 ROOT_URLCONF = 'config.urls'
 SECRET_KEY = os.getenv('SECRET_KEY')
-TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -75,9 +78,9 @@ USE_TZ = True
 # endregion
 
 # region Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_storage')
-MEDIA_URL = "/media/"
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # endregion
