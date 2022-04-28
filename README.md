@@ -1,23 +1,29 @@
 # GuestReady Entry Test
 
-Below you will find instructions on techs used, how to run locally (with venv), how to run with docker and how to run 
+- Below you will find instructions on techs used, how to run locally (with venv), how to run with docker and how to run
 tests. I've also provided example templates, though they only contain dummy data. Django Admin has also been enabled
 but left empty, again, as an example.
-
-You will also find a complete project structure, thought to include internationalization, different managers for the 
+- You will also find a complete project structure, thought to include internationalization, different managers for the
 models ORM, serializers (using Django REST Framework), diagrams documentation (using PUML), static content (for
 when the project includes a frontend), templatetags (functions callable from the frontend templates), test coverage,
 flake8, pre-commit hooks and docker.
-
-All requirements are set in the requirements.txt file.
-
-It's also prepared to host many applications to modularize the entire project.
+- All requirements are set in the requirements.txt file. They are not pinned, though that's recommended on a real
+project.
+- It's also prepared to host many applications to modularize the entire project.
+- I didn't use Gitflow because I'm the only developer, and it's a small project, but I use it on all my actual projects.
+- The ReadableWritableModelView is a custom view Mixin I use to build Views that should behave differently when reading
+from them than when writing to them. It also includes authentication permission. We don't need it in this project but I
+left it as example.
+- The architecture of this project includes patterns such as MVC (which is implemented by Django), REST (implemented
+using DRF) and Layers of Isolation.
+- Settings are separated into 3 files: a base file containing common settings, a development and a production files to
+hold each environment's specific settings.
 
 Have fun :)
 
 ## Effort Registry
 
-The entire project took 20 minutes to be completed.
+The entire project took 35 minutes to be completed.
 
 ## Technology Stack
 
