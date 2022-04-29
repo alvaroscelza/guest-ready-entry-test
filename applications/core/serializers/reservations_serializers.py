@@ -3,7 +3,13 @@ from rest_framework import serializers
 from applications.core.models import Reservation
 
 
-class ReservationSerializer(serializers.ModelSerializer):
+class ReservationReadSerializer(serializers.ModelSerializer):
+    rental_name = serializers.SerializerMethodField()
+
     class Meta:
         model = Reservation
-        fields = '__all__'
+        fields = ['rental_name', 'id', 'checkin', 'checkout']
+
+    @staticmethod
+    def get_rental_name(reservation):
+        return reservation.rental.name
