@@ -25,6 +25,7 @@ should be created for other endpoints, but I left them to show the full producti
 - I've implemented Swagger and you can use it to access and test the API at http://<domain>/api/v1/swagger/.
 - The endpoint that returns "the table of Reservations with previous reservation ID." is at
 `/reservations/get_reservations_with_previous/`
+- Pagination is also implemented.
 
 Have fun :)
 

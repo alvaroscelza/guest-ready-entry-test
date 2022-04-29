@@ -1,10 +1,11 @@
-from applications.core.tests.factories.breeds_factories import BreedsFactory
 from rest_framework.test import APITestCase
+
+from applications.core.tests.factories.rentals_factory import RentalsFactory
 
 
 class UniqueNameMixinsTests(APITestCase):
     def test_to_string_ok(self):
-        some_unique_name_object = BreedsFactory.build()
+        some_unique_name_object = RentalsFactory.build()
 
         object_to_string = some_unique_name_object.__str__()
 
