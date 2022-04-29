@@ -41,7 +41,7 @@ MIDDLEWARE = [
 REST_FRAMEWORK = {
     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S.%f',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'EXCEPTION_HANDLER': 'backend.applications.utils.exception_handler',
+    'EXCEPTION_HANDLER': 'applications.utils.exception_handler',
     'PAGE_SIZE': 10
 }
 ROOT_URLCONF = 'config.urls'
