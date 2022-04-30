@@ -9,7 +9,7 @@ when the project includes a frontend), templatetags (functions callable from the
 flake8, pre-commit hooks and docker.
 - All requirements are set in the requirements.txt file. They are not pinned, though that's recommended on a real
 project.
-- It's also prepared to host many applications to modularize the entire project.
+- It's also prepared to host many django applications to modularize the entire project.
 - I didn't use Gitflow because I'm the only developer, and it's a small project, but I use it on all my actual projects.
 - The ReadableWritableModelView is a custom view Mixin I use to build Views that should behave differently when reading
 from them than when writing to them. It also includes authentication permission. We don't need it in this project, but I
@@ -21,7 +21,7 @@ hold each environment's specific settings.
 - The ReservationsView inherits from DRF's ModelViewSet and thus, it provides full CRUD operations. Those operations
 won't work since the serializer I use was created specifically for the operation that was requested. Other serializers
 should be created for other endpoints, but I left them to show the full productivity potential of DRF. It also has the line
-`# permission_classes = [IsAuthenticated]` commented as an example, but we won't use authentication to simplify.
+`# permission_classes = [IsAuthenticated]` commented as an example, but we won't use authentication, to simplify.
 - I've implemented Swagger and you can use it to access and test the API at http://<domain>/api/v1/swagger/.
 - The endpoint that returns "the table of Reservations with previous reservation ID." is at
 `/reservations/get_reservations_with_previous/`
@@ -31,16 +31,13 @@ Have fun :)
 
 ## Assumptions
 - All Reservations have "correct" dates. That means: checkout date is always greater than, or equals its checkin date.
-This could be checked with custom validations: https://docs.djangoproject.com/en/4.0/ref/forms/validation/
+This could be checked with custom validations on a real project: https://docs.djangoproject.com/en/4.0/ref/forms/validation/
 - Reservations don't overlap for a same rental. Otherwise, the logic for get_previous_reservation in the serializer
-would be more complex.
-- Performance is not an issue: as you may notice, each time we call the endpoint get_reservations_with_previous, a call
-to database is done to fetch all reservations (because of calling `all()`), and then another call is made in
-get_previous_reservation to filter the prev reservation.
+should be more complex.
 
 ## Effort Registry
 
-The entire project took 108 minutes to be completed.
+The entire project took 194 minutes to be completed.
 
 ## Technology Stack
 
