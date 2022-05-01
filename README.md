@@ -51,8 +51,7 @@ The entire project took 194 minutes to be completed.
 -   Create virtual environment and activate it. Example: `virtualenv venv`
 -   Enter environment: Example: `venv\Scripts\activate`
 -   Install requirements:
-    -   Development: `pip install -r requirements/development.txt`
-    -   Production: `pip install -r requirements/base.txt`
+    -   Development: `pip install -r requirements.txt`
 -   `pre-commit install`
 -   Create an .env file at project root for storing secrets. File .env-example is provided as a guide of this file's content. Make sure you copy your SECRET_KEY there.
 -   `python manage.py makemigrations`
@@ -79,4 +78,4 @@ The entire project took 194 minutes to be completed.
 -   Run the tests with `docker-compose run web python manage.py test`
 -   Get test coverage with:
     -   `docker-compose run web coverage run --source='.' manage.py test`
-    -   `docker-compose run web coverage run --source='.' manage.py test`
+    -   `docker-compose run web coverage report --skip-covered --show-missing`
