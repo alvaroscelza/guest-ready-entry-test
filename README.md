@@ -37,7 +37,7 @@ should be more complex.
 
 ## Effort Registry
 
-The entire project took 194 minutes to be completed.
+The entire project took 214 minutes in total, to be completed.
 
 ## Technology Stack
 
@@ -50,13 +50,12 @@ The entire project took 194 minutes to be completed.
 
 -   Create virtual environment and activate it. Example: `virtualenv venv`
 -   Enter environment: Example: `venv\Scripts\activate`
--   Install requirements:
-    -   Development: `pip install -r requirements.txt`
--   `pre-commit install`
--   Create an .env file at project root for storing secrets. File .env-example is provided as a guide of this file's content. Make sure you copy your SECRET_KEY there.
--   `python manage.py makemigrations`
--   `python manage.py migrate`
--   `python manage.py createsuperuser`
+-   Install requirements: `pip install -r requirements.txt`
+-   Install pre-commit hooks feature: `pre-commit install`
+-   Create an `.env` file at project root for storing secrets. File .env-example is provided as a guide of this file's content. Make sure you copy your SECRET_KEY there.
+-   Generate migration files: `python manage.py makemigrations`
+-   Run migrations: `python manage.py migrate`
+-   Create superuser (you need this to access the admin backoffice): `python manage.py createsuperuser`
 -   Run using `python manage.py runserver`
 
 ### With Docker
@@ -69,8 +68,10 @@ The entire project took 194 minutes to be completed.
 
 ### Without Docker
 
--   Run the tests with `python manage.py test`
--   Get test coverage with `coverage run --source='.' manage.py test` and then `coverage report --skip-covered --show-missing`
+- Run the tests with `python manage.py test`
+- Get test coverage with:
+  - `coverage run --source='.' manage.py test`
+  - `coverage report --skip-covered --show-missing`
 
 ### With Docker
 
